@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.7.18</version>
+    </parent>
+
+    <groupId>cn.codingguide</groupId>
+    <artifactId>aito</artifactId>
+    <version>${revision}</version>
+
+    <name>aito</name>
+    <description>I love Aito, so I named the project Aito.</description>
+    <packaging>pom</packaging>
+
+    <developers>
+        <developer>
+            <name>itlemon</name>
+            <email>lemon_jiang@aliyun.com</email>
+            <url>https://codingguide.cn</url>
+        </developer>
+    </developers>
+
+    <modules>
+        <module>aito-core</module>
+        <module>aito-utils</module>
+        <module>aito-webapp</module>
+        <module>aito-model</module>
+    </modules>
+
+    <properties>
+        <revision>0.0.1</revision>
+        <!-- 以下配置和springboot保持一致，这里列出来是为了看起来方便 -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+
+        <mysql-connector-java.version>8.4.0</mysql-connector-java.version>
+        <oracle.version>23.4.0.24.05</oracle.version>
+        <mssql.version>12.7.0</mssql.version>
+        <postgresql.version>42.7.3</postgresql.version>
+        <beetl.version>1.2.40.Beetl.RELEASE</beetl.version>
+        <mp.version>3.5.6</mp.version>
+        <jwt.version>0.12.5</jwt.version>
+        <fastjson.version>2.0.51</fastjson.version>
+        <hutool.version>5.8.28</hutool.version>
+        <lombok.versin>1.18.32</lombok.versin>
+        <easyexcel.version>3.3.4</easyexcel.version>
+        <jodconverter.version>4.4.7</jodconverter.version>
+        <libreoffice.version>6.4.3</libreoffice.version>
+        <justauth.version>1.16.6</justauth.version>
+        <aliyun.oss.version>3.17.4</aliyun.oss.version>
+        <qcloud.oss.version>5.6.217</qcloud.oss.version>
+        <aliyun.sms.sdk.version>4.6.4</aliyun.sms.sdk.version>
+        <aliyun.sms.esc.version>5.11.7</aliyun.sms.esc.version>
+        <qcloud.sms.sdk.version>4.0.11</qcloud.sms.sdk.version>
+
+        <knife4j.version>3.0.3</knife4j.version>
+        <javax.mail.version>1.6.2</javax.mail.version>
+        <velocity.version>2.3</velocity.version>
+        <skipTests>true</skipTests>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- 核心模块 -->
+            <dependency>
+                <groupId>cn.codingguide</groupId>
+                <artifactId>aito-core</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <!-- 工具类模块 -->
+            <dependency>
+                <groupId>cn.codingguide</groupId>
+                <artifactId>aito-utils</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <!-- domain模块 -->
+            <dependency>
+                <groupId>cn.codingguide</groupId>
+                <artifactId>aito-model</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <!-- 代码生成模块 -->
+            <dependency>
+                <groupId>cn.codingguide</groupId>
+                <artifactId>aito-gen</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <!-- 系统模块 -->
+            <dependency>
+                <groupId>cn.codingguide</groupId>
+                <artifactId>aito-system</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <!-- web主模块 -->
+            <dependency>
+                <groupId>cn.codingguide</groupId>
+                <artifactId>aito-main</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <!-- 数据库驱动,可根据自己需要自行删减，默认使用mysql -->
+            <dependency>
+                <groupId>com.mysql</groupId>
+                <artifactId>mysql-connector-j</artifactId>
+                <version>${mysql-connector-java.version}</version>
+            </dependency>
+
+            <!-- oracle -->
+            <!--<dependency>
+                <groupId>com.oracle.database.jdbc</groupId>
+                <artifactId>ojdbc8</artifactId>
+                <version>${oracle.version}</version>
+            </dependency>-->
+
+            <!-- mssql -->
+            <!--<dependency>
+                <groupId>com.microsoft.sqlserver</groupId>
+                <artifactId>mssql-jdbc</artifactId>
+                <version>${mssql.version}</version>
+            </dependency>-->
+
+            <!-- postgresql -->
+            <!-- <dependency>
+                 <groupId>org.postgresql</groupId>
+                 <artifactId>postgresql</artifactId>
+                 <version>${postgresql.version}</version>
+             </dependency>-->
+
+            <!-- beetl-framework-starter -->
+            <dependency>
+                <groupId>com.ibeetl</groupId>
+                <artifactId>beetl-framework-starter</artifactId>
+                <version>${beetl.version}</version>
+            </dependency>
+
+            <!-- mybatis-plus -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mp.version}</version>
+            </dependency>
+
+            <!-- jwt token -->
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt-api</artifactId>
+                <version>${jwt.version}</version>
+            </dependency>
+
+            <!-- fastjson -->
+            <dependency>
+                <groupId>com.alibaba.fastjson2</groupId>
+                <artifactId>fastjson2</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+
+            <!-- hutool -->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
+
+            <!-- lombok -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.versin}</version>
+            </dependency>
+
+            <!-- swagger接口文档 -->
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-spring-boot-starter</artifactId>
+                <version>${knife4j.version}</version>
+            </dependency>
+
+            <!-- easyexcel导入导出 -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>easyexcel</artifactId>
+                <version>${easyexcel.version}</version>
+            </dependency>
+
+            <!-- libreoffice文档在线预览 -->
+            <dependency>
+                <groupId>org.jodconverter</groupId>
+                <artifactId>jodconverter-core</artifactId>
+                <version>${jodconverter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jodconverter</groupId>
+                <artifactId>jodconverter-local</artifactId>
+                <version>${jodconverter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jodconverter</groupId>
+                <artifactId>jodconverter-spring-boot-starter</artifactId>
+                <version>${jodconverter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.libreoffice</groupId>
+                <artifactId>ridl</artifactId>
+                <version>${libreoffice.version}</version>
+            </dependency>
+
+            <!-- justauth第三方登录 -->
+            <dependency>
+                <groupId>me.zhyd.oauth</groupId>
+                <artifactId>JustAuth</artifactId>
+                <version>${justauth.version}</version>
+            </dependency>
+
+            <!-- 阿里云上传文件客户端，用的时候手动引入 -->
+            <dependency>
+                <groupId>com.aliyun.oss</groupId>
+                <artifactId>aliyun-sdk-oss</artifactId>
+                <version>${aliyun.oss.version}</version>
+            </dependency>
+
+            <!-- 腾讯云上传文件客户端，用的时候手动引入 -->
+            <dependency>
+                <groupId>com.qcloud</groupId>
+                <artifactId>cos_api</artifactId>
+                <version>${qcloud.oss.version}</version>
+            </dependency>
+
+            <!-- 阿里云短信发送的sdk -->
+            <dependency>
+                <groupId>com.aliyun</groupId>
+                <artifactId>aliyun-java-sdk-core</artifactId>
+                <version>${aliyun.sms.sdk.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aliyun</groupId>
+                <artifactId>aliyun-java-sdk-ecs</artifactId>
+                <version>${aliyun.sms.esc.version}</version>
+            </dependency>
+
+            <!-- 腾讯云短信sdk -->
+            <dependency>
+                <groupId>com.tencentcloudapi</groupId>
+                <artifactId>tencentcloud-sdk-java</artifactId>
+                <version>${qcloud.sms.sdk.version}</version>
+            </dependency>
+
+            <!-- mail -->
+            <dependency>
+                <groupId>javax.mail</groupId>
+                <artifactId>javax.mail-api</artifactId>
+                <version>${javax.mail.version}</version>
+            </dependency>
+
+            <!-- 代码生成引擎 -->
+            <dependency>
+                <groupId>org.apache.velocity</groupId>
+                <artifactId>velocity-engine-core</artifactId>
+                <version>${velocity.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-stdlib-jdk8</artifactId>
+            <version>${kotlin.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-test</artifactId>
+            <version>${kotlin.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>${artifactId}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <configuration>
+                    <delimiters>
+                        <delimiter>@</delimiter>
+                    </delimiters>
+                    <useDefaultDelimiters>false</useDefaultDelimiters>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>default-compile</id>
+                        <phase>none</phase>
+                    </execution>
+                    <execution>
+                        <id>default-testCompile</id>
+                        <phase>none</phase>
+                    </execution>
+                    <execution>
+                        <id>compile</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>testCompile</id>
+                        <phase>test-compile</phase>
+                        <goals>
+                            <goal>testCompile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+        <resources>
+            <resource>
+                <directory>src/main/webapp</directory>
+                <filtering>false</filtering>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>local</id>
+            <properties>
+                <spring.active>local</spring.active>
+            </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+        <profile>
+            <id>dev</id>
+            <properties>
+                <spring.active>dev</spring.active>
+            </properties>
+        </profile>
+        <profile>
+            <id>prod</id>
+            <properties>
+                <spring.active>prod</spring.active>
+            </properties>
+        </profile>
+    </profiles>
+
+</project>
