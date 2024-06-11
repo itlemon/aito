@@ -12,6 +12,7 @@
 .idea
 target/
 logs/
+*.iml
 
 # Package Files #
 *.jar
