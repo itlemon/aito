@@ -3,25 +3,17 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>cn.codingguide</groupId>
-        <artifactId>aito</artifactId>
+        <artifactId>aito-webapp</artifactId>
         <version>${revision}</version>
     </parent>
 
-    <artifactId>aito-model</artifactId>
+    <artifactId>aito-demo</artifactId>
     <packaging>jar</packaging>
 
     <dependencies>
-        <!-- hutool -->
         <dependency>
-            <groupId>cn.hutool</groupId>
-            <artifactId>hutool-all</artifactId>
-        </dependency>
-
-        <!-- lombok -->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
+            <groupId>cn.codingguide</groupId>
+            <artifactId>aito-core</artifactId>
         </dependency>
     </dependencies>
-
 </project>

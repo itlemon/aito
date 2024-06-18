@@ -106,6 +106,13 @@
                 <version>${revision}</version>
             </dependency>
 
+            <!-- 测试模块 -->
+            <dependency>
+                <groupId>cn.codingguide</groupId>
+                <artifactId>aito-demo</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
             <!-- web主模块 -->
             <dependency>
                 <groupId>cn.codingguide</groupId>

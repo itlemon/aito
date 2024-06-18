@@ -20,6 +20,10 @@
             <groupId>cn.codingguide</groupId>
             <artifactId>aito-gen</artifactId>
         </dependency>
+        <dependency>
+            <groupId>cn.codingguide</groupId>
+            <artifactId>aito-demo</artifactId>
+        </dependency>
 
     </dependencies>
 

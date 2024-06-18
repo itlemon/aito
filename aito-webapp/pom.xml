@@ -13,6 +13,7 @@
         <module>aito-system</module>
         <module>aito-gen</module>
         <module>aito-main</module>
+        <module>aito-demo</module>
     </modules>
 
 
