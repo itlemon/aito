@@ -1,6 +1,6 @@
 package cn.codingguide.aito.demo.modular.demo.controller;
 
-import cn.codingguide.model.response.Message;
+import cn.codingguide.aito.model.response.Message;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

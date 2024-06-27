@@ -1,4 +1,4 @@
-package cn.codingguide.model.response;
+package cn.codingguide.aito.model.response;
 
 import java.time.LocalDateTime;
 
