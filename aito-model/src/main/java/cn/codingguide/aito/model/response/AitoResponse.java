@@ -2,6 +2,7 @@ package cn.codingguide.aito.model.response;
 
 import java.time.LocalDateTime;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.feiniaojin.gracefulresponse.data.Response;
 import com.feiniaojin.gracefulresponse.data.ResponseStatus;
@@ -27,7 +28,8 @@ public class AitoResponse implements Response {
 
     private Object data;
 
-    private final String timestamp = LocalDateTime.now().toString();
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    private final LocalDateTime timestamp = LocalDateTime.now();
 
     @Override
     public void setStatus(ResponseStatus statusLine) {
