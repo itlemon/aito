@@ -11,9 +11,5 @@
     <packaging>jar</packaging>
 
     <dependencies>
-        <dependency>
-            <groupId>cn.codingguide</groupId>
-            <artifactId>aito-core</artifactId>
-        </dependency>
     </dependencies>
 </project>

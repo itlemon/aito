@@ -20,8 +20,18 @@ spring:
     serialization:
       # 格式化输出
       indent_output: false
+
+
+
+
 beetl:
   suffix: html
+
+# graceful-response
+graceful-response:
+  response-class-full-name: cn.codingguide.aito.model.response.AitoResponse
+  default-success-msg: success
+  default-error-msg: failed
 
 #mybaits相关配置
 mybatis-plus:

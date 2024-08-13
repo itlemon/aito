@@ -22,6 +22,11 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>com.feiniaojin</groupId>
+            <artifactId>graceful-response</artifactId>
+        </dependency>
     </dependencies>
 
 </project>

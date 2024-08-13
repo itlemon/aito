@@ -46,11 +46,12 @@
         <oracle.version>23.4.0.24.05</oracle.version>
         <mssql.version>12.7.0</mssql.version>
         <postgresql.version>42.7.3</postgresql.version>
+        <graceful-response.version>3.5.2-boot2</graceful-response.version>
         <beetl.version>1.2.40.Beetl.RELEASE</beetl.version>
         <mp.version>3.5.6</mp.version>
         <jwt.version>0.12.5</jwt.version>
         <fastjson.version>2.0.51</fastjson.version>
-        <hutool.version>5.8.28</hutool.version>
+        <hutool.version>5.8.31</hutool.version>
         <lombok.versin>1.18.32</lombok.versin>
         <easyexcel.version>3.3.4</easyexcel.version>
         <jodconverter.version>4.4.7</jodconverter.version>
@@ -147,6 +148,13 @@
                  <artifactId>postgresql</artifactId>
                  <version>${postgresql.version}</version>
              </dependency>-->
+
+            <!-- 统一返回和异常处理 -->
+            <dependency>
+                <groupId>com.feiniaojin</groupId>
+                <artifactId>graceful-response</artifactId>
+                <version>${graceful-response.version}</version>
+            </dependency>
 
             <!-- beetl-framework-starter -->
             <dependency>
